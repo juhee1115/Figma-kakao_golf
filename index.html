@@ -135,6 +135,7 @@
         <h1>골프의 모든 것, 한곳에서</h1>
         <h3>예약부터 스코어 관리까지 카카오골프가 함께합니다.</h3>
       </div>
+
       <section class="intro">
         <div class="slider-intro">
           <div class="slider-intro-list" id="slider-1">
@@ -143,21 +144,86 @@
             <img src="image/main-intro-2.png" alt="인트로3" />
             <img src="image/main-intro-3.png" alt="인트로4" />
           </div>
+          <!-- pagenation -->
+          <div class="slider-page">
+            <div class="page-bar" data-index="0"></div>
+            <div class="page-bar" data-index="1"></div>
+            <div class="page-bar" data-index="2"></div>
+            <div class="page-bar" data-index="3"></div>
+          </div>
         </div>
       </section>
+
       <!-- section_2 :  플랫폼 요약-->
-       <div class="inner">
+      <div class="inner">
         <h1>프로 골퍼도 선택한 플랫폼</h1>
         <h3>국내 최대 규모의 골프 예약 서비스</h3>
-       </div>
-      <section ></section>
+      </div>
+      <section class="summary">
+        <img src="image/main_progolfer.jpg" alt="section2-img" />
+        <div class="summary-right">
+          <div class="part">
+            <h2>누적 가입자</h2>
+            <h1 class="counter" data-count="300">300<span>만 +</span></h1>
+            <p>매달 빠르게 성장하고</p>
+          </div>
+          <div class="part">
+            <h2>제휴 골프장</h2>
+            <h1 class="counter" data-count="500">500<span>개 +</span></h1>
+            <p>전국 주요 골프장은 물론, 해외도 함께 합니다</p>
+          </div>
+          <div class="part">
+            <h2>누적 리뷰</h2>
+            <h1 class="counter" data-count="1200">1,200<span>만 건</span></h1>
+            <p>믿고 사용하는 NO.1 플랫폼</p>
+          </div>
+        </div>
+      </section>
       <!-- section_3 :  후기 -->
+      <section class="review">
+        <div class="inner-gr">
+          <h1>실제 골퍼들의 이야기</h1>
+          <h3>카카오골프 이용자들의 <span>생생한 후기</span></h3>
+          <div class="review-slide">
+            <!-- 흐르는 슬라이드 : 왼쪽으로  -->
+             <div class="slide-wrap slide-left">
+            <img src="image/review-1.png" alt="리뷰1" />
+            <img src="image/review-2.png" alt="리뷰1" />
+            <img src="image/review-3.png" alt="리뷰1" />
+            <!-- 무한 슬라이드  -->
+             <img src="image/review-1.png" alt="리뷰1" />
+            <img src="image/review-2.png" alt="리뷰1" />
+            <img src="image/review-3.png" alt="리뷰1" />
+             </div>
+             <!-- 흐르는 슬라이드 : 오른쪽으로  -->
+             <div class="slide-wrap slide-right">
+            <img src="image/review.png" alt="리뷰1" />
+            <img src="image/review-4.png" alt="리뷰1" />
+            <img src="image/review-5.png" alt="리뷰1" />
+            <!-- 무한 슬라이드  -->
+             <img src="image/review.png" alt="리뷰1" />
+            <img src="image/review-4.png" alt="리뷰1" />
+            <img src="image/review-5.png" alt="리뷰1" />
+             </div>
+        
+          </div>
+        </div>
+      </section>
+
       <!-- section_4 :  이용방법 -->
       <!-- section_5 :  첫 회원가입 혜택 -->
       <!-- section_6 :  이번주 BEST 코스 소개/ 예약  -->
       <!-- footer -->
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="js/header.js"></script>
     <script src="js/slide.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/counting.js"></script>
   </body>
 </html>

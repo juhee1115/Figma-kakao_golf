@@ -3,6 +3,11 @@
 
 @import url(header.css);
 @import url(intro.css);
+@import url(summary.css);
+@import url(review.css);
+
+
+@import url(modal.css);
 @import url(responsive.css);
 
 

@@ -1,6 +1,37 @@
-
-
 @media (max-width: 768px) {
+  /* inner */
+  .inner {
+    width: 100%;
+    height: 130px;
+    text-align: center;
+    padding-top: 30px;
+  }
+  .inner h1 {
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .inner h3 {
+    font-size: 15px;
+    padding-top: 5px;
+    color: #959595;
+  }
+  /* inner-green */
+  .inner-gr {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 30px;
+  }
+  .inner-gr h1 {
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .inner-gr h3 {
+    font-size: 15px;
+    padding-top: 5px;
+    color: #959595;
+  }
+  /* header */
   .navi-wrap {
     justify-content: space-between;
     width: 100%;
@@ -15,13 +46,19 @@
     transform: translateX(-50%);
     display: block;
   }
-  .navi { display: none; }
-  .header-left { width: 100%; }
-  .header-right { display: none; }
+  .navi {
+    display: none;
+  }
+  .header-left {
+    width: 100%;
+  }
+  .header-right {
+    display: none;
+  }
 
-  .login { 
-    display: block; 
-}
+  .login {
+    display: block;
+  }
 
   .login button {
     border: 1px solid white;
@@ -34,12 +71,12 @@
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
     cursor: pointer;
-     transition: all 0.3s;
+    transition: all 0.3s;
   }
-    .login button:hover{
-        background-color: white;
-       background-color: rgba(255, 255, 255, 0.5);
-    }
+  .login button:hover {
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 
   /*  중복 제거하고 하나로 합침 */
   .header-btn-book {
@@ -47,7 +84,6 @@
     position: absolute;
     bottom: 110px;
     left: 50px;
-   
   }
   .header-btn-book button {
     background-color: rgba(255, 255, 255, 0.3);
@@ -59,7 +95,7 @@
     font-weight: bold;
     border: 1px solid white;
     cursor: pointer;
-     transition: all 0.3s;
+    transition: all 0.3s;
   }
   .header-btn-book button:hover {
     background-color: #ffe600;
@@ -67,18 +103,97 @@
   }
   /* 로고 모바일 */
   .logo-mobile img {
-  width: 130px;  
- 
-}
-.logo-mobile {
+    width: 130px;
+  }
+  .logo-mobile {
     position: absolute;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: block;
-    z-index: 10; 
-}
+    z-index: 10;
+  }
+  /* slides - bar */
+  .page-bar {
+    width: 15px;
+  }
+  .page-bar.active {
+    width: 20px;
+  }
+
+  /* section2 - summary */
+  .summary {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    padding-bottom: 30px;
+  }
+  .summary img {
+    display: none;
+  }
+  .summary-right {
+    gap: 10px;
+    width: 100%;
+    margin-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .part {
+    text-align: center;
+  }
+  .part h1 {
+    font-size: 35px;
+  }
+
+  .part h2 {
+    font-size: 18px;
+  }
+
+  .part p {
+    font-size: 12px;
+  }
+  .part span {
+    font-size: 20px;
+  }
+  /* review */
+  .slide-wrap img {
+    height: 140px;
+  }
+  .slide-left,
+  .slide-right {
+    animation-duration: 18s;
+  }
 }
 /* 480px 모바일 */
 @media (max-width: 480px) {
+
+  /* bar */
+  .page-bar {
+    width: 10px;
+  }
+  .page-bar.active {
+    width: 20px;
+  }
+    .part {
+    text-align: center;
+  }
+  /* summary  */
+  .part h1 {
+    font-size: 20px;
+  }
+
+  .part h2 {
+    font-size: 18px;
+  }
+
+  .part p {
+    font-size: 10px;
+  }
+  .part span {
+    font-size: 15px;
+  }
+  /* review */
+     .slide-wrap img { height: 110px; }
+.slide-left, .slide-right  { animation-duration: 14s; }
 }

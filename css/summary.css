@@ -1,0 +1,40 @@
+.summary{
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 50px;
+gap: 60px;
+}
+.summary img{
+  width: 50%;
+  height: auto;
+   object-fit: cover;
+}
+
+.summary-right{
+margin-left: 50px;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   justify-content: center;
+}
+
+.part h2{
+    font-size: 25px;
+    font-weight: 500;
+}
+.part h1{
+    font-size: 70px;
+    color: var(--color--kao);
+}
+.part span{
+    font-size: 30px;
+}
+.part p{
+    color: rgba(149, 149, 149, 1);
+        font-size: 20px;
+}
+
+
