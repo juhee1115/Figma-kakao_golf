@@ -1,0 +1,100 @@
+
+
+.how{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  gap: 0;
+  margin: 0px 100px;
+  padding-bottom: 100px;
+}
+
+
+
+.how-step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+ .how-text h1 {
+  text-align: center;
+    margin-top: 20px;
+}
+
+ .how-text p {
+  text-align: center;
+  color: #555;
+  line-height: 1.6;
+  font-size: 25px;
+}
+/* 연결선 */
+.how-line{
+    flex: 1;
+   height: 5px;
+   background-color: var(--color--border);
+ margin-bottom: 150px;
+}
+
+/* 동그라미 */
+.step-circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.5s, border 0.5s;
+    border: 3px solid #ddd;
+}
+
+.step-circle img{
+    width: 80px;
+    height: 80px;
+  filter: brightness(1.5); /* 밝게 = 연한 회색 */
+  transition: filter 0.5s;
+
+}
+
+.step-circle.active img {
+  opacity: 1;
+   filter: brightness(0) !important; /* 검정 */}
+
+
+.step-num {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.5s;
+}
+
+/* 활성화 스타일 */
+.step-circle.active {
+  background-color: #fee500;
+  border: 3px solid #fee500;
+}
+
+.step-circle.active img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.step-circle.active .step-num {
+  background-color: #333;
+}
+
+

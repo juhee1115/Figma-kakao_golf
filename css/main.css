@@ -5,7 +5,9 @@
 @import url(intro.css);
 @import url(summary.css);
 @import url(review.css);
-
+@import url(how.css);
+@import url(event.css);
+@import url(best.css);
 
 @import url(modal.css);
 @import url(responsive.css);

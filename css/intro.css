@@ -1,0 +1,52 @@
+.slider-intro {
+  position: relative; /* 기준점 */
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-intro-list {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slider-intro-list img {
+  min-width: 100%;
+  object-fit: cover;
+}
+
+/* pagenation */
+.slider-page {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 100;
+}
+
+.page-bar {
+  width: 50px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.452);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.page-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.page-bar.active::after {
+  width: 100%;
+  transition: width 3s linear;
+}

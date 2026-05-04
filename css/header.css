@@ -17,7 +17,7 @@
 .header-box {
   display: flex;
   width: 100%;
-  height: 700px;
+  height: 900px;
 }
 
 /* header- left */
@@ -35,17 +35,37 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 0;
 }
-.slider-img {
-  display: flex;
-  width: 300%;
+
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  transition: all 0.8s ease-in-out;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4) 0%,    
+    rgba(0, 0, 0, 0.2) 100%   
+  );
+  z-index: 0;
 }
-.slider-img img {
-  width: calc(100% / 3);
+#slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+#slider img {
+  position: absolute;
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
 }
 .navi-wrap {
   position: absolute;
@@ -54,6 +74,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 1;
 }
 
 .navi a {
@@ -63,6 +84,8 @@
 .navi a:hover {
   text-decoration: underline;
 }
+
+
 .bar {
   font-size: 25px;
   background: none;
@@ -70,25 +93,38 @@
   color: white;
   cursor: pointer;
 }
+
 .header-title {
   position: absolute;
-  top: 300px;
+  bottom: 80px;        /* top 고정 → bottom으로 변경 */
   left: 50px;
   color: white;
+  z-index: 1;
 }
+
 .header-title h2 {
-  padding: 10px 0;
+  padding: 8px 20px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50px;
   color: #fee500;
   text-align: center;
   margin-bottom: 30px;
+  /* font-size: clamp(0.75rem, 1.2vw, 1rem); 반응형 */
+  width: fit-content;  /* 텍스트 길이만큼만 너비 */
 }
+
+.header-title h1 {
+  /* font-size: clamp(1.4rem, 3vw, 2.8rem); 반응형 */
+  line-height: 1.4;
+}
+
 .header-title span {
   color: #fee500;
 }
+
 .header-title p {
   margin-top: 30px;
+  /* font-size: clamp(0.75rem, 1.2vw, 1rem); 반응형 */
 }
 
 
@@ -100,12 +136,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 20px 30px;
+  padding: 30px 40px;
 }
 
 .logo {
-  margin-bottom: 10px;
   text-align: center;
+}
+.logo img{
+  margin-top: 30px;
 }
 
 .lang {
@@ -137,24 +175,29 @@
 
 .header-right-box label {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 .header-right-opt {
   border-radius: 10px;
   width: 100%;
-  height: 40px;
+  height: 50px;
   border: 1px solid #d8d8d8;
   background-color: #f8f8f8;
   padding: 0 20px;
   color: #999999;
+  font-size: 18px;
+  
+
 }
 .btn-teatime {
   display: block;
+  font-size: 18px;
   background-color: #f8f8f8;
   border: 1px solid #d8d8d8;
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 60px;
@@ -173,12 +216,13 @@
 }
 .form li {
   flex: 1;
-  height: 40px;
+  height: 50px;
   text-align: center;
   border: 1px solid #e8e8e8;
   border-radius: 10px;
-  line-height: 40px;
+  line-height: 50px;
   transition: all 0.3s;
+    font-size: 18px;
 }
 .form li:hover {
   background-color: #fee500;
@@ -187,15 +231,18 @@
 .forgot {
   text-align: right;
   padding: 3px 0;
-  font-size: 13px;
-  margin-bottom: 15px;
+  font-size: 15px;
+  margin-bottom: 70px;
+   
 }
 .forgot a {
   color: #999999;
+ 
 }
 
 /* 소셜 로그인 텍스트 */
 .social {
+  
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -211,7 +258,7 @@
   color: #888;
   font-size: 13px;
   margin-top: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .social-p::before,
