@@ -133,7 +133,7 @@
   .summary {
     width: 100%;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 50px;
     padding-bottom: 30px;
   }
   .summary img {
@@ -174,59 +174,7 @@
     animation-duration: 18s;
   }
 
-  /* how */
 
-  .how {
-    display: block;
-  }
-  .how-line {
-    display: none;
-  }
-  .step-circle {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;   /* 아이콘 크기 고정 */
-    margin-right: 0;  /* gap으로 대체 */
-    margin-bottom: 0;
-    position: relative;
-  }
-  .step-num {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 0;
-    right: 0;         /* ← -72px 제거, 원 안에 위치 */
-    font-size: 12px;
-  }
-  .step-circle img {
-    width: 50px;
-    height: 50px;
-  }
-  .how-step {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-        /* margin 대신 gap으로 간격 */
-    padding: 20px 16px;  /* 좌우 여백 */
-  }
-  .how-text {
-    flex: 1;          /* 남은 공간 차지 */
-    min-width: 0;     /* 넘침 방지 */
-    margin-bottom: 0;
-    padding-left: 20px;
-  }
-  .how-text h1 {
-        margin-top: 0;
-    text-align: left !important;
-    font-size: 25px;
-  }
-  .how-text p {
-        text-align: left !important;
-    font-size: 20px;
-  }
-  .how-text br {
-    display: none;
-  }
   
   /* event */
 .event-list li h1{
@@ -251,6 +199,99 @@
   font-size: 20px;
   
 }
+
+/*  이번주 베스트 코스 */
+.course-inner{
+  padding: 50px;
+}
+.course{
+  padding: 50px 0;
+}
+.course-top li{
+  padding: 10px;
+}
+.course-top li h1{
+ font-size: 35px;
+}
+.course-top li h3{
+  font-size: 20px;
+}
+.course-top ul{
+height: 100px;
+}
+.course-bottom{
+  display: none ; 
+}
+.title-en{
+  font-size: 20px;
+}
+.course-title h1{
+  font-size: 40px;
+}
+.course-title p{
+  font-size: 20px;
+}
+.course ul{
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 10px;
+}
+.course li{
+  width: 53%;
+  display: flex;
+  flex-direction: row;   
+  align-items: center;     
+  gap: 20px;              
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.233);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.733);
+  color: white;
+}
+.course li img{
+width: 50px;
+}
+.course li h2{
+  font-size: 20px;
+}
+.course li p{
+  font-size: 15px;
+}
+.course-price{
+  margin: 0;
+  padding-bottom: 60px;
+}
+
+.course-price h1{
+  font-size: 30px;
+}
+.course-price p{
+  font-size: 20px;
+}
+
+.button{
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.164);
+  color: white;
+  
+}
+
+/* footer */
+.footer h1{
+  font-size: 25px;
+}
+.footer li{
+  font-size: 15px;
+  line-height: 35px;
+}
+.footer p{
+  font-size: 15px;
+}
+
 }
 /* 480px 모바일 */
 @media (max-width: 480px) {
@@ -372,31 +413,6 @@
     animation-duration: 14s;
   }
 
- /* how */
-  .step-circle {
-
-    width: 60px;
-    height: 60px;
-  }
-  .step-circle img {
-    width: 24px;
-    height: 24px;
-  }
-  .step-num {
-    width: 16px;
-    height: 16px;
-    font-size: 10px;
-  }
-  .how-text h1 {
-    font-size: 20px;
-  }
-  .how-text p {
-    font-size: 15px !important;
-  }
-  .how-step {
-    gap: 10px;
-    padding: 0 10px;
-  }
 
   /* event */
 

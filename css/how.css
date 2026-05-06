@@ -1,100 +1,111 @@
-
-
-.how{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  gap: 0;
-  margin: 0px 100px;
+.howto {
   padding-bottom: 100px;
 }
-
-
-
-.how-step{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-
-}
- .how-text h1 {
+.how {
+  max-width: 540px;
+  margin: 0 auto;
   text-align: center;
-    margin-top: 20px;
+  text-align: left;
 }
 
- .how-text p {
-  text-align: center;
-  color: #555;
-  line-height: 1.6;
-  font-size: 25px;
+/* 각 스텝 행 */
+.how-step {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  opacity: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
 }
-/* 연결선 */
-.how-line{
-    flex: 1;
-   height: 5px;
-   background-color: var(--color--border);
- margin-bottom: 150px;
-}
-
-/* 동그라미 */
-.step-circle{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: background-color 0.5s, border 0.5s;
-    border: 3px solid #ddd;
-}
-
-.step-circle img{
-    width: 80px;
-    height: 80px;
-  filter: brightness(1.5); /* 밝게 = 연한 회색 */
-  transition: filter 0.5s;
-
-}
-
-.step-circle.active img {
+.how-step.visible {
   opacity: 1;
-   filter: brightness(0) !important; /* 검정 */}
+  transform: translateY(0);
+}
 
+/* 왼쪽: 서클 + 선 */
+.step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
 
-.step-num {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
+/* 서클 */
+.step-circle {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: #ddd;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.5s;
+  flex-shrink: 0;
 }
 
-/* 활성화 스타일 */
-.step-circle.active {
-  background-color: #fee500;
-  border: 3px solid #fee500;
+.step-circle img {
+  width: 24px;
+  height: 24px;
 }
 
-.step-circle.active img {
-  opacity: 1;
-  filter: grayscale(0%);
+/* 서클 색상 */
+.step-yellow {
+  background: #eeedfe;
+}
+.step-blue {
+  background: #e6f1fb;
+}
+.step-green {
+  background: #eaf3de;
+}
+.step-pink {
+  background: #fbeaf0;
 }
 
-.step-circle.active .step-num {
-  background-color: #333;
+/* 연결선 */
+.step-line {
+  width: 2px;
+  min-height: 40px;
+  flex: 1;
+  background: #fac775;
+  margin: 4px 0;
 }
 
+/* 마지막 스텝 선 숨김 */
+.no-line .step-line {
+  background: transparent;
+}
 
+/* 오른쪽: 번호 + 텍스트 */
+.step-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0 36px;
+}
+
+/* 번호 */
+.step-num {
+  font-size: 13px;
+  font-weight: 500;
+  background: #faeeda;
+  color: #633806;
+  border-radius: 99px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* 텍스트 */
+.how-text h1 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.how-text p {
+  font-size: 15px;
+  color: #888;
+  line-height: 1.6;
+}
