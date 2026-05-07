@@ -4,8 +4,6 @@
     width: 100%;
     height: 100%;
     text-align: center;
-  
-    
   }
   .inner h1 {
     font-size: 30px;
@@ -21,14 +19,13 @@
     width: 100%;
     height: 100%;
     text-align: center;
-
   }
   .inner-gr h1 {
-      font-size: 30px;
+    font-size: 30px;
     font-weight: 900;
   }
   .inner-gr h3 {
-     font-size: 20px;
+    font-size: 20px;
     padding-top: 5px;
     color: #959595;
   }
@@ -56,6 +53,28 @@
   .header-right {
     display: none;
   }
+  .header {
+    position: relative;
+  }
+  .header-title {
+    position: absolute;
+    bottom: 80px;
+  }
+
+  .header-btn-book button {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .header-btn-book button:hover {
+    background-color: rgba(255, 255, 255, 0.712);
+  }
 
   .login {
     display: block;
@@ -79,29 +98,12 @@
     background-color: rgba(255, 255, 255, 0.5);
   }
 
-  /*  중복 제거하고 하나로 합침 */
+  /* 태블릿, 모바일 골프장 예약하기 버튼 */
   .header-btn-book {
     display: block;
-    position: absolute;
-    bottom: 80px;
-    right: 50px;
+    padding-top: 20px 0;
   }
-  .header-btn-book button {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    border: 1px solid white;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .header-btn-book button:hover {
-    background-color: #ffffff93;
-    color: black;
-  }
+
   /* 로고 모바일 */
   .logo-mobile img {
     width: 130px;
@@ -146,7 +148,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  padding-bottom: 50px;
+    padding-bottom: 50px;
   }
   .part {
     text-align: center;
@@ -174,132 +176,87 @@
     animation-duration: 18s;
   }
 
-
-  
   /* event */
-.event-list li h1{
-  font-size: 20px;
-}
-.inclu{
-  font-size: 20px;
+  .event-list li h1 {
+    font-size: 20px;
+  }
+  .inclu {
+    font-size: 20px;
+  }
+  .orig {
+    font-size: 20px;
+  }
+  .event-list li h2 {
+    font-size: 20px;
+  }
+  .event-sign {
+    width: 300px;
+    height: 50px;
+  }
+  .event-sign a {
+    font-size: 20px;
+  }
+  /* 베스트 코스 */
+  .course-bottom {
+    display: none;
+  }
+  .course-inner {
+    width: 100%;
+  }
+  .course-inner {
+    padding: 15px 60px;
+  }
+  .course {
+    padding: 50px 0 0;
+  }
+  .course ul {
+    width: 60%;
+  }
+  .course-title {
+    margin-top: 50px;
+  }
+  .course {
+    margin-bottom: 50px;
+  }
 
-}
-.orig{
-  font-size: 20px;
-}
-.event-list li h2{
-       font-size: 20px;
-}
-.event-sign{
-  width: 300px;
-  height: 50px;
-  
-}
-.event-sign a{
-  font-size: 20px;
-  
-}
+  .button {
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.719);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    background: none;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .button:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.719);
+  }
 
-/*  이번주 베스트 코스 */
-.course-inner{
-  padding: 50px;
-}
-.course{
-  padding: 50px 0;
-}
-.course-top li{
-  padding: 10px;
-}
-.course-top li h1{
- font-size: 35px;
-}
-.course-top li h3{
-  font-size: 20px;
-}
-.course-top ul{
-height: 100px;
-}
-.course-bottom{
-  display: none ; 
-}
-.title-en{
-  font-size: 20px;
-}
-.course-title h1{
-  font-size: 40px;
-}
-.course-title p{
-  font-size: 20px;
-}
-.course ul{
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  gap: 10px;
-}
-.course li{
-  width: 53%;
-  display: flex;
-  flex-direction: row;   
-  align-items: center;     
-  gap: 20px;              
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.233);
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.733);
-  color: white;
-}
-.course li img{
-width: 50px;
-}
-.course li h2{
-  font-size: 20px;
-}
-.course li p{
-  font-size: 15px;
-}
-.course-price{
-  margin: 0;
-  padding-bottom: 60px;
-}
-
-.course-price h1{
-  font-size: 30px;
-}
-.course-price p{
-  font-size: 20px;
-}
-
-.button{
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.164);
-  color: white;
-  
-}
-
-/* footer */
-.footer h1{
-  font-size: 25px;
-}
-.footer li{
-  font-size: 15px;
-  line-height: 35px;
-}
-.footer p{
-  font-size: 15px;
-}
-
+  /* footer */
+  .footer h1 {
+    font-size: 25px;
+  }
+  .footer li {
+    font-size: 15px;
+    line-height: 35px;
+  }
+  .footer p {
+    font-size: 15px;
+  }
 }
 /* 480px 모바일 */
+
 @media (max-width: 480px) {
   .inner {
     width: 100%;
     height: 100%;
     text-align: center;
-  
+    padding-top: 70px;
   }
   .inner h1 {
     font-size: 20px;
@@ -308,6 +265,7 @@ width: 50px;
   .inner h3 {
     font-size: 13px;
     padding-top: 5px;
+    padding-bottom: 70px;
     color: #959595;
   }
   /* inner-green */
@@ -315,6 +273,7 @@ width: 50px;
     width: 100%;
     height: 100%;
     text-align: center;
+    padding-top: 70px;
   }
   .inner-gr h1 {
     font-size: 20px;
@@ -323,61 +282,31 @@ width: 50px;
   .inner-gr h3 {
     font-size: 13px;
     padding-top: 5px;
+    padding-bottom: 70px;
     color: #959595;
   }
 
   /* header */
-  .header-box{
+
+  .header-box {
     height: 600px;
-  }
-  .header-title {
-    position: absolute;
-    top: 150px; /* top 고정 → bottom으로 변경 */
-    left: 20px;
-    color: white;
-    z-index: 1;
   }
 
   .header-title h2 {
-    padding: 5px 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-    color: #fee500;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 15px;
-    width: fit-content; /* 텍스트 길이만큼만 너비 */
+    font-size: 13px;
+  }
+
+  .header-title h1 {
+    font-size: 25px;
   }
 
   .header-btn-book button {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    width: 200px;
-    height: 50px;
-    font-size: 15px;
-    color: white;
-    font-weight: bold;
-    border: 1px solid white;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-
-  .header-btn-book button:hover {
-    background-color: #ffffff93;
-    color: black;
-  }
-  .header-title h1 {
-    line-height: 1.4;
-  }
-
-  .header-title span {
-    color: #fee500;
-  }
-
-  .header-title p {
+    font-size: 13px;
+    width: 150px;
+    height: 40px;
     margin-top: 30px;
-    /* font-size: clamp(0.75rem, 1.2vw, 1rem); 반응형 */
   }
+
   /* bar */
   .page-bar {
     width: 10px;
@@ -413,7 +342,228 @@ width: 50px;
     animation-duration: 14s;
   }
 
+  /* summary */
+  .summary {
+    width: 100%;
+    padding: 0 20px;
+  }
 
-  /* event */
+  .summary-wrap {
+    flex-direction: column;
+  }
 
+  .summary img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .summary-right {
+    width: 100%;
+    margin-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .part {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .part h2 {
+    font-size: 11px;
+    word-break: keep-all;
+    margin-bottom: 4px;
+  }
+
+  .part h1 {
+    font-size: 22px;
+    white-space: nowrap; /* 숫자+단위 한줄 유지 */
+  }
+
+  .part span {
+    font-size: 12px;
+  }
+
+  /* how */
+  .howto {
+    padding-bottom: 60px;
+  }
+
+  .how {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .how-step {
+    gap: 20px;
+  }
+
+  .step-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .step-circle img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .step-line {
+    min-height: 30px;
+  }
+
+  .how-text h1 {
+    font-size: 20px;
+  }
+
+  .how-text p {
+    font-size: 15px;
+  }
+
+  .step-num {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  /* 첫가입 혜택 */
+  .event {
+    padding-bottom: 60px;
+  }
+
+  .event-list ul {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .event-list li {
+    padding: 20px;
+    margin: 6px;
+  }
+
+  .event-list li h1 {
+    font-size: 22px;
+  }
+
+  .inclu {
+    font-size: 16px;
+  }
+
+  .orig {
+    font-size: 18px;
+  }
+
+  .event-list li h2 {
+    font-size: 26px;
+  }
+
+  .event-sign {
+    width: 90%;
+    height: 70px;
+  }
+
+  .event-sign a {
+    font-size: 24px;
+  }
+
+  /* 베스트코스 */
+  .course-bottom {
+    display: none;
+  }
+
+  .course-res-wrap {
+    flex-direction: column;
+  }
+
+  .course-inner {
+    width: 100%;
+    flex: none;
+    padding: 20px;
+  }
+
+  .course-top li h1 {
+    font-size: 24px;
+  }
+
+  .course-top li p {
+    font-size: 13px;
+  }
+
+  .course-top li {
+    padding: 16px 10px;
+  }
+
+  .title-en {
+    font-size: 11px;
+  }
+
+  .course-title h1 {
+    font-size: 24px;
+  }
+
+  .course-title p {
+    font-size: 14px;
+  }
+
+  .course {
+    padding: 30px 0 0;
+    margin-bottom: 30px;
+  }
+
+  .course ul {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .course li {
+    padding: 16px;
+  }
+
+  .course h2 {
+    font-size: 16px;
+  }
+
+  .course-text {
+    font-size: 13px;
+  }
+
+  .course-price h1 {
+    font-size: 26px;
+  }
+
+  .course-price p {
+    font-size: 13px;
+  }
+
+  .header-btn-book button {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .footer {
+    position: relative;
+  }
+  .footer h1 {
+    font-size: 15px;
+  }
+  .footer ul {
+    display: block;
+  }
+  .footer li {
+    font-size: 5px;
+  }
+  .footer p {
+    position: absolute;
+    bottom: 15px;
+  }
 }

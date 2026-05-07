@@ -3,13 +3,18 @@ window.addEventListener('load', () => {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if (!entry.isIntersecting) return;
+
+      const index = [...steps].indexOf(entry.target);
+
+      setTimeout(() => {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+      }, index * 200); // 200ms 간격으로 순차 등장
+
+      observer.unobserve(entry.target);
     });
   }, {
-    threshold:0.3
+    threshold: 0.3
   });
 
   steps.forEach(step => observer.observe(step));

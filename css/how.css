@@ -40,11 +40,13 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-top: 10px;
 }
 
 .step-circle img {
   width: 24px;
   height: 24px;
+   filter: brightness(0);
 }
 
 /* 서클 색상 */
@@ -80,7 +82,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 10px 0 36px;
+  padding: 10px 0;
 }
 
 /* 번호 */
@@ -98,14 +100,14 @@
 
 /* 텍스트 */
 .how-text h1 {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 500;
   color: #1a1a1a;
   margin-bottom: 4px;
 }
 
 .how-text p {
-  font-size: 15px;
+  font-size: 20px;
   color: #888;
-  line-height: 1.6;
+  
 }

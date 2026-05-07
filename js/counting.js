@@ -3,39 +3,68 @@ $(function () {
 
   function getThreshold() {
     const width = window.innerWidth;
-    if (width <= 380) return 0.1;       // 소형 모바일: 10%만 보여도 실행
-    if (width <= 768) return 0.3;       // 모바일: 30%
-    if (width >= 1920) return 0.7;      // 대형 모니터: 70%
-    return 0.5;                          // 일반 PC: 50%
+    if (width <= 380) return 0.1;
+    if (width <= 768) return 0.3;
+    if (width >= 1920) return 0.7;
+    return 0.5;
   }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      observer.unobserve(entry.target);
+  function animateCounter(target) {
+    const $this = $(target);
 
-      const $this = $(entry.target);
-      const countTo = $this.attr('data-count');
-      const $span = $this.find('span');
+    // 이미 실행됐으면 스킵
+    if ($this.data('animated')) return;
+    $this.data('animated', true);
 
-      $({ countNum: 0 }).animate({
-        countNum: countTo
-      }, {
-        duration: 3000,
-        easing: 'linear',
-        step: function () {
-          $this.contents().first().replaceWith(Math.floor(this.countNum).toLocaleString());
-          $this.append($span);
-        },
-        complete: function () {
-          $this.contents().first().replaceWith(Number(this.countNum).toLocaleString());
-          $this.append($span);
-        }
-      });
+    const countTo = $this.attr('data-count');
+    const $span = $this.find('span');
+
+    $({ countNum: 0 }).animate({
+      countNum: countTo
+    }, {
+      duration: 3000,
+      easing: 'linear',
+      step: function () {
+        $this.contents().first().replaceWith(Math.floor(this.countNum).toLocaleString());
+        $this.append($span);
+      },
+      complete: function () {
+        $this.contents().first().replaceWith(Number(this.countNum).toLocaleString());
+        $this.append($span);
+      }
     });
-  }, {
-    threshold: getThreshold()
-  });
+  }
 
-  counters.forEach((counter) => observer.observe(counter));
+  function createObserver() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        animateCounter(entry.target);
+      });
+    }, {
+      threshold: getThreshold()
+    });
+
+    counters.forEach((counter) => {
+      // 이미 애니메이션 된 건 다시 등록 안 함
+      if (!$(counter).data('animated')) {
+        observer.observe(counter);
+      }
+    });
+
+    return observer;
+  }
+
+  let observer = createObserver();
+
+  // 리사이즈 시 observer 재생성
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      observer.disconnect();
+      observer = createObserver();
+    }, 300);
+  });
 });
