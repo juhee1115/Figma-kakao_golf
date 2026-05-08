@@ -11,7 +11,11 @@
   text-align: center;
   padding: 0px 50px;
 }
-.event-list li span::after{
+.event-list 
+
+
+
+li span::after{
 padding: 10px 0;
   content: "";
   display: block;
@@ -48,7 +52,7 @@ color: rgba(255, 255, 255, 0.781);
 }
 
 .event-sign {
-    background-color:#ffffff46;
+    background-color:#fffcfc;
     width: 500px;
     height: 100px;
     margin: auto;
@@ -68,7 +72,3 @@ color: rgba(255, 255, 255, 0.781);
     align-items: center;
 }
 
-.event-sign:hover{
-background-color: rgba(255, 255, 255, 0.705);
-
-}

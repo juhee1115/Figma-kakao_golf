@@ -92,13 +92,13 @@
 
 .course ul {
   padding-top: 10px;
-  width: 45%;
+  width: 60%;
 }
 
 .course li {
   flex: 1;
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.308);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
@@ -108,15 +108,14 @@
 
 .course h2 {
   font-size: 20px;
-  padding: 6px 0;
+  padding: 3px 0;
 
 }
 
 .course-text {
   font-size: 18px;
-  padding: 4px 0;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.986);
+
 }
 /* 가격 */
 .course-price {
@@ -259,13 +258,9 @@
 
 /* 예약 하단 */
 .bottom-book {
+  text-align: right;
   padding-top: 250px;
-  padding-bottom: 20px;
-  position: relative;
- display: flex;
- justify-content: flex-end;
-  align-items: center;
-  gap: 16px;
+  
 }
 
 .bottom-book h2 {
@@ -273,12 +268,12 @@
 }
 
 .bottom-book h1 {
-  font-size: 32px;
+font-size: 20px;
   color: var(--color--kao);
+  padding-bottom: 20px;
 }
 
-.bottom-book button {
-  margin-left: auto;
+.book-button {
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: none;
   padding: 14px 28px;
@@ -286,9 +281,10 @@
   color: white;
   cursor: pointer;
   border-radius: 8px;
+  width: 100%;
 }
 
-.bottom-book button:hover {
+.book-button button:hover {
   background-color: rgba(255, 255, 255, 0.7);
   color: black;
 }
