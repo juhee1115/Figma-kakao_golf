@@ -193,7 +193,7 @@
 .btn-teatime {
   display: block;
   font-size: 18px;
-  background-color: #f8f8f8;
+  background-color: #fee500;
   border: 1px solid #d8d8d8;
   width: 100%;
   height: 50px;
@@ -204,11 +204,7 @@
   border-radius: 10px;
   transition: all 0.3s;
 }
-.btn-teatime:hover {
-  font-weight: bold;
-  background-color: #fee500;
-  border: 1px solid #979797;
-}
+
 .form {
   display: flex;
   gap: 5px;
@@ -218,11 +214,13 @@
   flex: 1;
   height: 50px;
   text-align: center;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #363636;
   border-radius: 10px;
+  background-color: #cccccc;
   line-height: 50px;
   transition: all 0.3s;
-    font-size: 18px;
+   font-size: 18px;
+   cursor: pointer;
 }
 .form li:hover {
   background-color: #fee500;
