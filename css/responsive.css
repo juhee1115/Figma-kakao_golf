@@ -304,15 +304,11 @@
 
   /* footer */
   
-  .footer h1 {
-    font-size: 20px;
-  }
-  .footer li {
-    font-size: 13px;
-    line-height: 35px;
-  }
-  .footer p {
-    font-size: 13px;
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1.75rem;
+    gap: 1rem;
   }
 }
 
@@ -624,15 +620,31 @@
     cursor: pointer;
   }
 
- 
-  .footer h1 {
-    font-size: 15px;
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem 1rem;
   }
-.footer{
-  padding: 5px;
-}
-  .footer li {
-    font-size: 8px;
+
+  .footer h1 {
+    font-size: 14px;
+  }
+
+  .footer ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .footer ul li {
+    border-right: none;
+    padding: 3px 0;
+    margin-right: 0;
+  }
+
+  .footer p {
+    font-size: 11px;
+    order: 2; /* 맨 마지막으로 */
   }
 
 }
