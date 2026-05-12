@@ -1,20 +1,17 @@
-.footer{
-    height: 200px;
-    padding: 30px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap
+.footer {
+  height: 200px;
+  padding: 30px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-
-.footer ul{
-    display: flex;
-    gap: 30px;
+.footer ul {
+  display: flex;
+  gap: 30px;
 }
 
 .footer p {
-
   font-size: 15px;
 }
