@@ -373,6 +373,26 @@
     font-size: 13px;
     
   }
+/* 소개 섹션 슬라이드 */
+.slider-intro{
+  display: none;
+}
+.slider-intro1 {
+  display: block;
+  position: relative; 
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-intro-list1 {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slider-intro-list1 img {
+  min-width: 100%;
+  object-fit: cover;
+}
 
   /* bar */
   .page-bar {

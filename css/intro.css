@@ -50,3 +50,7 @@
   width: 100%;
   transition: width 3s linear;
 }
+
+.slider-intro1{
+ display: none;
+}

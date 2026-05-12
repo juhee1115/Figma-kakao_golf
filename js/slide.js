@@ -63,6 +63,7 @@ function initIntroSlider() {
   updatePageBar();
 }
 
+
 function updatePageBar() {
   const realIndex = (introIndex - 1 + introImages.length) % introImages.length;
   pageBars.forEach((bar, i) => {
@@ -124,3 +125,5 @@ pageBars.forEach((bar) => {
 
 initIntroSlider();
 introTimer = setInterval(nextIntroSlide, SLIDE_INTERVAL);
+
+
